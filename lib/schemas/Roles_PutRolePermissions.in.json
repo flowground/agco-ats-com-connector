@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "items": {
+                "description": "Change to the Permissions that a Role is given.",
+                "properties": {
+                    "Action": {
+                        "description": "The action to take.",
+                        "enum": [
+                            "Grant",
+                            "Revoke"
+                        ],
+                        "type": "string"
+                    },
+                    "Permission": {
+                        "description": "The name of the permission to grant or revoke.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Permission",
+                    "Action"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

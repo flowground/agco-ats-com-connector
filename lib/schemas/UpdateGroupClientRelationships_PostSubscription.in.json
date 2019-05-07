@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "Active": {
+                    "description": "The subscription status.  The status is active by default.",
+                    "type": "boolean"
+                },
+                "ClientID": {
+                    "description": "Read Only after creation. The client id of the subscriber.",
+                    "type": "string"
+                },
+                "LastCheckin": {
+                    "description": "ReadOnly. The timestamp of the last checkin.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "RelationshipID": {
+                    "description": "Read Only after creation. The relationship id.  A relationship id will be assigned if not provided on creation.",
+                    "type": "string"
+                },
+                "UpdateGroupID": {
+                    "description": "Read Only after creation. The update group to subscribe to.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "UpdateGroupID",
+                "ClientID"
+            ],
+            "type": "object"
+        }
+    }
+}

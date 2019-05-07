@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "BundleID": {
+                    "description": "The bundle to include the package in.",
+                    "type": "string"
+                },
+                "PackageTypeID": {
+                    "description": "The package type id of the package to include",
+                    "type": "string"
+                },
+                "PackageVersion": {
+                    "description": "The package version of the package to include",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Priority": {
+                    "description": "The execution priority of the package relative to other packages in the bundle. Range 1 - 100, lower value indication higher priority.",
+                    "format": "int32",
+                    "maximum": 100,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "SubscriptionType": {
+                    "description": "Optional. The type of subscription supported.  The default subscription type is Required.",
+                    "enum": [
+                        "Required",
+                        "IncludeByDefault",
+                        "ExcludeByDefault"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "BundleID",
+                "PackageTypeID",
+                "PackageVersion"
+            ],
+            "type": "object"
+        }
+    }
+}

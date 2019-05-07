@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "Status of a voucher in the AGCO Power system",
+            "properties": {
+                "DealerCode": {
+                    "description": "The dealer code of the voucher",
+                    "type": "string"
+                },
+                "State": {
+                    "description": "The state of the voucher",
+                    "enum": [
+                        "Active",
+                        "Inactive",
+                        "None"
+                    ],
+                    "type": "string"
+                },
+                "VoucherCode": {
+                    "description": "The voucher code",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "VoucherCode",
+                "DealerCode"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "items": {
+                "properties": {
+                    "Action": {
+                        "description": "The action to take with the user",
+                        "enum": [
+                            "Grant",
+                            "Revoke"
+                        ],
+                        "type": "string"
+                    },
+                    "Id": {
+                        "description": "The Id of the User",
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "Id",
+                    "Action"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

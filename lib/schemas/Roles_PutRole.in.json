@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "description": "Defines an API Role",
+            "properties": {
+                "Description": {
+                    "description": "Role description",
+                    "type": "string"
+                },
+                "Id": {
+                    "description": "The role's identifier.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "description": "The name of the role. Must be alpha-numeric strings separated by a period (.).",
+                    "pattern": "^[0-9a-zA-Z]+(\\.[0-9a-zA-Z]+)*$",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Name",
+                "Description"
+            ],
+            "type": "object"
+        }
+    }
+}

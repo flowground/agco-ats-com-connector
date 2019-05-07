@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "BuildDate": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "ReleaseDate": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "ReleaseID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ReleaseNumber": {
+                    "type": "string"
+                },
+                "Visible": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

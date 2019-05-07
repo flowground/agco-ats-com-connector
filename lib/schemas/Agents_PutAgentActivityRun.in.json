@@ -1,0 +1,172 @@
+{
+    "type": "object",
+    "properties": {
+        "agentID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "description": "A DTO for an IActivityRun",
+            "properties": {
+                "ActivityRunID": {
+                    "description": "The identifier for the ActivityRun",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "EndDate": {
+                    "description": "Read Only. The UTC date and time when the activity completed",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "JobActivityID": {
+                    "description": "Read Only. The ID of the Job Activity that defines this activity run",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "JobRunID": {
+                    "description": "Read Only. The ID of the JobRun under which this ActivityRun is executing",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Parameters": {
+                    "description": "The parameters used for this run of the activity.  Parameters cannot be added or removed, but output parameter values may be updated.",
+                    "items": {
+                        "description": "A DTO for an IParameterValue",
+                        "properties": {
+                            "Direction": {
+                                "description": "The parameter direction (Input or Output)",
+                                "enum": [
+                                    "Input",
+                                    "Output"
+                                ],
+                                "type": "string"
+                            },
+                            "Name": {
+                                "description": "The name of the parameter this value is for",
+                                "type": "string"
+                            },
+                            "Value": {
+                                "description": "The parameter value in string representation",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                },
+                "StartDate": {
+                    "description": "Read Only. The UTC date and time when the activity started",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Status": {
+                    "description": "The status of this ActivityRun",
+                    "properties": {
+                        "CurrentStep": {
+                            "description": "The activity step currently executing, indicated by numeric order",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "Status": {
+                            "description": "The status of the ActivityRun",
+                            "enum": [
+                                "Ready",
+                                "InProgress",
+                                "Succeeded",
+                                "Cancelled",
+                                "Failed"
+                            ],
+                            "type": "string"
+                        },
+                        "StepProgress": {
+                            "description": "The percent progress from the currently executing step.  This value shall be null if progress is not available",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "StepStatus": {
+                            "description": "The status text from the currently executing step",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Steps": {
+                    "description": "Read Only. The steps to be executed for the activity.  These steps come from the relationship through JobActivity down to ActivityStep",
+                    "items": {
+                        "description": "A DTO for an IActivityStep",
+                        "properties": {
+                            "ActivityID": {
+                                "description": "The id of the activity this activity step belongs to",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "ActivityStepID": {
+                                "description": "The id of this activity step",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "ImplementationID": {
+                                "description": "The implementation id which is used to look up the step implementation",
+                                "type": "string"
+                            },
+                            "ParameterMappings": {
+                                "description": "The mapping of values from a source to be used for the step parameters",
+                                "items": {
+                                    "description": "A DTO for an IParameterMapping",
+                                    "properties": {
+                                        "Name": {
+                                            "description": "The name of the parameter this mapping applies to",
+                                            "type": "string"
+                                        },
+                                        "Source": {
+                                            "description": "The source of the value.  The meaning of this value is determined by the source type.  When the source type is “Constant” then source is the value formatted as a string.  When the source type is “Variable” then the source is the name of the variable",
+                                            "type": "string"
+                                        },
+                                        "SourceType": {
+                                            "description": "The source type used for supplying the parameter",
+                                            "enum": [
+                                                "Constant",
+                                                "Variable"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "readOnly": true,
+                                "type": "array"
+                            },
+                            "RunOrder": {
+                                "description": "The order of this activity step relative to other activity steps",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "StepID": {
+                                "description": "The id of the step",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "StepName": {
+                                "description": "The name of the step",
+                                "type": "string"
+                            },
+                            "UseConfig": {
+                                "description": "Indicates the configuration for the ActivityStep to use at runtime.  The build agent must provide this configuration",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Status"
+            ],
+            "type": "object"
+        }
+    }
+}

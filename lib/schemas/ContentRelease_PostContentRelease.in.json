@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "ContentDefinitionID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ContentReleaseID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Deleted": {
+                    "type": "boolean"
+                },
+                "PublisherUserID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ReleaseID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "TestReportUrl": {
+                    "type": "string"
+                },
+                "UpdatedDate": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Version": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

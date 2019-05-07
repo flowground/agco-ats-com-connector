@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "ID": {
+            "required": true,
+            "type": "string"
+        },
+        "IncludeInactive": {
+            "required": true,
+            "type": "boolean"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

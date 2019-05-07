@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "ID": {
+            "required": true,
+            "type": "string"
+        },
+        "SubscriptionTypeFilter": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "RequiredOnly",
+                "Default",
+                "All"
+            ]
+        }
+    }
+}

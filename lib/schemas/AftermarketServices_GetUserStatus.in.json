@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "voucherCode": {
+            "required": true,
+            "type": "string"
+        },
+        "dealerCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

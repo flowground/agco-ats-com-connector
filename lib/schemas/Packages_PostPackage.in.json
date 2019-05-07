@@ -1,0 +1,86 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "Autorun": {
+                    "description": "Value is true if package should run automatically. Default value is false.",
+                    "type": "boolean"
+                },
+                "CRC": {
+                    "description": "The CRC used to validate the download.",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "The package description",
+                    "type": "string"
+                },
+                "LocalizedName": {
+                    "description": "Optional. The StringID used to localize the name of the Package",
+                    "type": "string"
+                },
+                "Notes": {
+                    "description": "Notes about the package",
+                    "type": "string"
+                },
+                "PackageID": {
+                    "description": "Read Only. The package ID",
+                    "type": "string"
+                },
+                "PackageTypeID": {
+                    "description": "The id of the package type this package belongs to.",
+                    "type": "string"
+                },
+                "PreviousVersion": {
+                    "description": "For delta packages, the previous version required.  For non-delta packages, the Previous version is 0.  Default value is 0.",
+                    "format": "int32",
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer"
+                },
+                "ReleaseDate": {
+                    "description": "The date the package was released",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Released": {
+                    "description": "True if the package is released.  Default value is False.",
+                    "type": "boolean"
+                },
+                "RemoveOnSuccess": {
+                    "description": "True to remove the package after successful execution.  Default value is False.",
+                    "type": "boolean"
+                },
+                "Size": {
+                    "description": "The size of the file at the specified URL.  If a size is not supplied at creation time, the size will be determined by the response from the URL.\r\n            If the size provided does not match the size in the response from the URL an error will be returned.",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "Switches": {
+                    "description": "The command line arguments for the package.  Default value is an empty string.",
+                    "type": "string"
+                },
+                "Url": {
+                    "description": "The Url to download the package from.",
+                    "type": "string"
+                },
+                "Version": {
+                    "description": "The version.",
+                    "format": "int32",
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "PackageTypeID",
+                "Url",
+                "CRC",
+                "Version",
+                "Description",
+                "ReleaseDate"
+            ],
+            "type": "object"
+        }
+    }
+}

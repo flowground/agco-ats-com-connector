@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "Brand": {
+            "required": false,
+            "type": "string"
+        },
+        "ShippingCountry": {
+            "required": false,
+            "type": "string"
+        },
+        "DealerName": {
+            "required": false,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

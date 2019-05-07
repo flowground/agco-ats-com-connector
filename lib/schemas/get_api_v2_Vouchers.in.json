@@ -1,0 +1,91 @@
+{
+    "type": "object",
+    "properties": {
+        "Type": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Commercial",
+                "Internal",
+                "Temporary"
+            ]
+        },
+        "DealerCode": {
+            "required": false,
+            "type": "string"
+        },
+        "LicenseTo": {
+            "required": false,
+            "type": "string"
+        },
+        "Purpose": {
+            "required": false,
+            "type": "string"
+        },
+        "OrderNumber": {
+            "required": false,
+            "type": "string"
+        },
+        "Email": {
+            "required": false,
+            "type": "string"
+        },
+        "ModifiedBy": {
+            "required": false,
+            "type": "string"
+        },
+        "CreatedAfter": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "CreatedBefore": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "PunchedAfter": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "PunchedBefore": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "Punched": {
+            "required": false,
+            "type": "boolean"
+        },
+        "ExpirationAfter": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "ExpirationBefore": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "Deleted": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "NotDeleted",
+                "Deleted",
+                "All"
+            ]
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

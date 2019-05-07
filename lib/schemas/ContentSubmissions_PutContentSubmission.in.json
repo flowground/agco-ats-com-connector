@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "contentSubmissionID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "ContentDefinitionID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ContentSubmissionID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "JobRunID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PackageID": {
+                    "type": "string"
+                },
+                "ReleaseNotes": {
+                    "type": "string"
+                },
+                "Repository": {
+                    "type": "string"
+                },
+                "Revision": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "SubmissionDate": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "UserID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Version": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

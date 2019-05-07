@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "UpdateGroupID": {
+            "required": false,
+            "type": "string"
+        },
+        "ClientID": {
+            "required": false,
+            "type": "string"
+        },
+        "Tag": {
+            "required": false,
+            "type": "string"
+        },
+        "ReportResult": {
+            "required": false,
+            "type": "string"
+        },
+        "ReportResultIsValid": {
+            "required": false,
+            "type": "boolean"
+        },
+        "ReportValue": {
+            "required": false,
+            "type": "string"
+        },
+        "LastCheckInBefore": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "LastCheckInAfter": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "OrderBy": {
+            "required": false,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

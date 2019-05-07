@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "name": {
+            "required": false,
+            "type": "string"
+        },
+        "createdByUserID": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "deletedByUserID": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "includeDeleted": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

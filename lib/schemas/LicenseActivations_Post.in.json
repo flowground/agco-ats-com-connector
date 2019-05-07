@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "DealerCode": {
+                    "description": "The Dealer Code of the dealer activating the license",
+                    "type": "string"
+                },
+                "LicenseActivationType": {
+                    "description": "The type of license to create (e.g. EDT, EDT Lite)",
+                    "enum": [
+                        "EDT",
+                        "EDTLite"
+                    ],
+                    "type": "string"
+                },
+                "PostalCode": {
+                    "description": "The dealer's postal code (zip code)",
+                    "type": "string"
+                },
+                "SystemInfo": {
+                    "description": "Information about  the system being activated",
+                    "type": "string"
+                },
+                "VoucherCode": {
+                    "description": "The Voucher Code to use for activation",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "VoucherCode",
+                "DealerCode",
+                "PostalCode",
+                "SystemInfo"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "ClientID": {
+                    "description": "The ClientID.",
+                    "type": "string"
+                },
+                "Include": {
+                    "description": "True to receive content of type indicated by PackageTypeID.",
+                    "type": "boolean"
+                },
+                "PackageTypeID": {
+                    "description": "The PackageType to set subscription status for",
+                    "type": "string"
+                },
+                "UpdateGroupID": {
+                    "description": "The Update Group this subscription is relevant for.",
+                    "type": "string"
+                },
+                "UpdateGroupSubscriptionID": {
+                    "description": "The Update Group Subscription ID.  This ID will be automatically assigned when creating an Update Group Subscription.",
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "UpdateGroupID",
+                "PackageTypeID",
+                "ClientID",
+                "Include"
+            ],
+            "type": "object"
+        }
+    }
+}

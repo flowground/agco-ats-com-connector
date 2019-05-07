@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Ready",
+                "InProgress",
+                "Succeeded",
+                "Cancelled",
+                "Failed"
+            ]
+        }
+    }
+}

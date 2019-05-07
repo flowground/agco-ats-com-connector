@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "serialNumber": {
+            "required": true,
+            "type": "string"
+        },
+        "EDTInstanceId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

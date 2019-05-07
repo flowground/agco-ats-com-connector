@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "ChangePassword": {
+                    "description": "Never Returned.  When changing a user's password, this field must contain the new password.",
+                    "type": "string"
+                },
+                "Email": {
+                    "description": "The user's email address",
+                    "type": "string"
+                },
+                "Name": {
+                    "description": "The user's name",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Never Returned.  Required when creating a new user or updating a user.  When changing a user's password this field must contain the current password.",
+                    "type": "string"
+                },
+                "UserID": {
+                    "description": "The user ID",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Username": {
+                    "description": "The username used for authentication",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

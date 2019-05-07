@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "ClientID": {
+            "required": false,
+            "type": "string"
+        },
+        "Status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Active",
+                "Completed",
+                "All"
+            ]
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

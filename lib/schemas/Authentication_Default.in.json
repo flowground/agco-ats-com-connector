@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "BearerAction": {
+                    "description": "The action to perform on the bearer token. Optional. Defaults to ‘None’.",
+                    "enum": [
+                        "None",
+                        "Reset",
+                        "Disable"
+                    ],
+                    "type": "string"
+                },
+                "MACAction": {
+                    "description": "The action to perform on the MAC token. Optional. Defaults to ‘None’.",
+                    "enum": [
+                        "None",
+                        "Reset",
+                        "Disable"
+                    ],
+                    "type": "string"
+                },
+                "password": {
+                    "description": "A secret word or phrase that must be used to gain admission",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "A unique ID a user needs to login with",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "username",
+                "password"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "Represents the model containing an authorization code used to unlock a feature in machines and EDT",
+            "properties": {
+                "Code": {
+                    "description": "The code to enter to unlock a feature. Read only.",
+                    "type": "string"
+                },
+                "CreatedByUserID": {
+                    "description": "The ID of the user that created this authorization code. Read only.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "description": "A timestamp of when this code was created. Read only.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "DataParameters": {
+                    "description": "The parameters and values contained as data in this authorization code. May not be updated.",
+                    "items": {
+                        "description": "A parameter used to create an authorization code.",
+                        "properties": {
+                            "Name": {
+                                "description": "The name of the parameter. May not be updated.",
+                                "type": "string"
+                            },
+                            "Value": {
+                                "description": "The value of the parameter. May not be updated.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Name",
+                            "Value"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "DefinitionID": {
+                    "description": "The id of the definition for this authorization code. May not be updated.",
+                    "type": "string"
+                },
+                "DeletedByUserID": {
+                    "description": "The ID of the user that deleted this authorization code. Read only.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DeletedDate": {
+                    "description": "A timestamp of when this authorization code was deleted. Read only.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "ID": {
+                    "description": "The identifier for the authorization code. Read only.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "IsDeleted": {
+                    "description": "Indicates whether this code is deleted.",
+                    "type": "boolean"
+                },
+                "ValidationParameters": {
+                    "description": "The parameters and values used to validate this authorization code. May not be updated.",
+                    "items": {
+                        "description": "A parameter used to create an authorization code.",
+                        "properties": {
+                            "Name": {
+                                "description": "The name of the parameter. May not be updated.",
+                                "type": "string"
+                            },
+                            "Value": {
+                                "description": "The value of the parameter. May not be updated.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Name",
+                            "Value"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

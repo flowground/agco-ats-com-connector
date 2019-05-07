@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "VoucherCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

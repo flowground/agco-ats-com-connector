@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "UserID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "BearerAction": {
+                    "description": "The action to perform on the bearer token. Optional. Defaults to ‘None’.",
+                    "enum": [
+                        "None",
+                        "Reset",
+                        "Disable"
+                    ],
+                    "type": "string"
+                },
+                "MACAction": {
+                    "description": "The action to perform on the MAC token. Optional. Defaults to ‘None’.",
+                    "enum": [
+                        "None",
+                        "Reset",
+                        "Disable"
+                    ],
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

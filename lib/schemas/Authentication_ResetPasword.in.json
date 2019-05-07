@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "NewPassword": {
+                    "description": "The new password",
+                    "type": "string"
+                },
+                "Token": {
+                    "description": "The password reset token",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Token",
+                "NewPassword"
+            ],
+            "type": "object"
+        }
+    }
+}

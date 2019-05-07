@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "agentID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "description": "A DTO for an IAgentStatus",
+            "properties": {
+                "LastStatusUpdate": {
+                    "description": "ReadOnly. The UTC date and time of the last status update",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Online": {
+                    "description": "Indicates if the agent is online",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "Online"
+            ],
+            "type": "object"
+        }
+    }
+}

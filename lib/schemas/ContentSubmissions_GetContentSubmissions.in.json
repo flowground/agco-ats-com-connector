@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "userID": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "contentDefinitionID": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

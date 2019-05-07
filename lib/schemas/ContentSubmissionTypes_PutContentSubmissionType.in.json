@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "AttributeTemplate": {
+                    "type": "string"
+                },
+                "CategoryTemplate": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "Enabled": {
+                    "type": "boolean"
+                },
+                "ID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "InventoryPackageID": {
+                    "type": "string"
+                },
+                "JobID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "ReleaseNotesDescription": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Name",
+                "Description"
+            ],
+            "type": "object"
+        }
+    }
+}

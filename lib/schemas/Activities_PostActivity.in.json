@@ -1,0 +1,128 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "A DTO for an IActivity",
+            "properties": {
+                "ActivityID": {
+                    "description": "The ID of the activity",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Deleted": {
+                    "description": "",
+                    "type": "boolean"
+                },
+                "Name": {
+                    "description": "The name of the activity",
+                    "type": "string"
+                },
+                "Parameters": {
+                    "description": "The parameters for this activity",
+                    "items": {
+                        "description": "A DTO for an IParameter",
+                        "properties": {
+                            "Direction": {
+                                "description": "The parameter direction (Input or Output)",
+                                "enum": [
+                                    "Input",
+                                    "Output"
+                                ],
+                                "type": "string"
+                            },
+                            "Name": {
+                                "description": "The name of the parameter",
+                                "type": "string"
+                            },
+                            "Type": {
+                                "description": "The data type of the parameter",
+                                "enum": [
+                                    "String",
+                                    "Boolean",
+                                    "Integer",
+                                    "Float",
+                                    "StringDictionary"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                },
+                "Steps": {
+                    "description": "The steps which are performed for this activity",
+                    "items": {
+                        "description": "A DTO for an IActivityStep",
+                        "properties": {
+                            "ActivityID": {
+                                "description": "The id of the activity this activity step belongs to",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "ActivityStepID": {
+                                "description": "The id of this activity step",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "ImplementationID": {
+                                "description": "The implementation id which is used to look up the step implementation",
+                                "type": "string"
+                            },
+                            "ParameterMappings": {
+                                "description": "The mapping of values from a source to be used for the step parameters",
+                                "items": {
+                                    "description": "A DTO for an IParameterMapping",
+                                    "properties": {
+                                        "Name": {
+                                            "description": "The name of the parameter this mapping applies to",
+                                            "type": "string"
+                                        },
+                                        "Source": {
+                                            "description": "The source of the value.  The meaning of this value is determined by the source type.  When the source type is “Constant” then source is the value formatted as a string.  When the source type is “Variable” then the source is the name of the variable",
+                                            "type": "string"
+                                        },
+                                        "SourceType": {
+                                            "description": "The source type used for supplying the parameter",
+                                            "enum": [
+                                                "Constant",
+                                                "Variable"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "readOnly": true,
+                                "type": "array"
+                            },
+                            "RunOrder": {
+                                "description": "The order of this activity step relative to other activity steps",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "StepID": {
+                                "description": "The id of the step",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "StepName": {
+                                "description": "The name of the step",
+                                "type": "string"
+                            },
+                            "UseConfig": {
+                                "description": "Indicates the configuration for the ActivityStep to use at runtime.  The build agent must provide this configuration",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

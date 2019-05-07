@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "ClientID": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "items": {
+                "properties": {
+                    "Categories": {
+                        "description": "The package report's categories.",
+                        "items": {
+                            "properties": {
+                                "Values": {
+                                    "items": {
+                                        "properties": {
+                                            "Key": {
+                                                "description": "The attribute name",
+                                                "type": "string"
+                                            },
+                                            "TimeStamp": {
+                                                "description": "Read Only. The timestamp.",
+                                                "format": "date-time",
+                                                "type": "string"
+                                            },
+                                            "Value": {
+                                                "description": "The value",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "Key"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "category": {
+                                    "description": "The category name",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "category"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "PackageDescription": {
+                        "description": "Read Only. The package description",
+                        "type": "string"
+                    },
+                    "PackageID": {
+                        "description": "The PackageID.",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

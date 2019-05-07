@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "ClientID": {
+            "required": true,
+            "type": "string"
+        },
+        "UpdateGroupID": {
+            "required": true,
+            "type": "string"
+        },
+        "Active": {
+            "required": true,
+            "type": "boolean"
+        }
+    }
+}

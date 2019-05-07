@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "Attribute": {
+                    "description": "The inventory attribute (from the InventoryPackage) used to determine what version of this package type is installed.",
+                    "type": "string"
+                },
+                "Category": {
+                    "description": "The inventory category (from the InventoryPackage) used to determine what version of this package type is installed.",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "The description of the package type",
+                    "type": "string"
+                },
+                "Icon": {
+                    "description": "Optional.  The icon to use for the PackageType, in base 64",
+                    "type": "string"
+                },
+                "InventoryFrequency": {
+                    "description": "The number of minutes to wait before requesting another inventory.  The default value is 1440 (24 hours).",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "InventoryPackage": {
+                    "description": "The inventory package used to determine what version of this package type is installed.",
+                    "type": "string"
+                },
+                "LocalizedDescription": {
+                    "description": "Optional. The StringID used to localize the description of the PackageType",
+                    "type": "string"
+                },
+                "LocalizedName": {
+                    "description": "Optional. The StringID used to localize the name of the PackageType",
+                    "type": "string"
+                },
+                "MaxDeltaPackages": {
+                    "description": "The maximum number of \"chained\" delta packages to use when updating the client",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PackageTypeID": {
+                    "description": "Read Only. The package type id.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Description"
+            ],
+            "type": "object"
+        }
+    }
+}

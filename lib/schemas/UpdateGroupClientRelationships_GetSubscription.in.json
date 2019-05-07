@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "RelationshipID": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "VoucherCode": {
+            "required": false,
+            "type": "string"
+        },
+        "ChangedBefore": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "ChangedAfter": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

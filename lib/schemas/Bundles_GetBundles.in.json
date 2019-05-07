@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "UpdateGroupID": {
+            "required": false,
+            "type": "string"
+        },
+        "Active": {
+            "required": false,
+            "type": "boolean"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

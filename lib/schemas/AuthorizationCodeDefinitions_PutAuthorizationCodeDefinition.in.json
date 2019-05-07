@@ -1,0 +1,173 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the model used to define how a type of authorization code is generated.",
+            "properties": {
+                "CreatedByUserID": {
+                    "description": "The ID of the user that created this definition. Read only.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "description": "A timestamp of when this definition was created. Read only.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "DataFields": {
+                    "description": "The defined fields to include in authorization codes generated from this definition. May not be updated.",
+                    "items": {
+                        "properties": {
+                            "DigitsPrecision": {
+                                "description": "The number of decimal digits to be used by this data field. Required only by the 'Float' data type. Must be in range 1 - 15.",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "MaxExponent": {
+                                "description": "The maximum exponent to be used by this data field. Required only by the 'Float' data type. May not be greater than 307.",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "MaxValue": {
+                                "description": "The maximum value that can be represented by this data field. Required only by the 'Decimal' data type.",
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "MinExponent": {
+                                "description": "The minimum exponent to be used by this data field. Required only by the 'Float' data type. May not be less than -292.",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "MinValue": {
+                                "description": "The minimum value that can be represented by this data field. Required only by the 'Decimal' data type.",
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "Name": {
+                                "description": "The name of the field.",
+                                "type": "string"
+                            },
+                            "ScaleFactor": {
+                                "description": "The resolution of values that can be represented by this data field. The base value is multiplied by this to compute the final value. Required only by the 'Decimal' data type.",
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "Signed": {
+                                "description": "Indicates whether this value is signed. Required only by the 'Float' data type.",
+                                "type": "boolean"
+                            },
+                            "Type": {
+                                "description": "The type of this data field.",
+                                "enum": [
+                                    "Boolean",
+                                    "Decimal",
+                                    "Float",
+                                    "VariableLengthByteArray"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Type",
+                            "Name"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "DeletedByUserID": {
+                    "description": "The ID of the user that deleted this definition. Read only.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DeletedDate": {
+                    "description": "A timestamp of when this definition was deleted. Read only.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "A description of this definition. May not be updated.",
+                    "type": "string"
+                },
+                "DurationAccuracy": {
+                    "description": "The number of bits used for timestamp verification. Defaults to 5. May not be updated.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DurationAmount": {
+                    "description": "The amount of duration for the specified duration unit used to calculate the Authorization Code. Defaults to 1. May not be updated.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DurationUnits": {
+                    "description": "The units of duration used to calculate the Authorization Code. Defaults to 'Days'. May not be updated.",
+                    "enum": [
+                        "Weeks",
+                        "Days",
+                        "Hours",
+                        "Minutes"
+                    ],
+                    "type": "string"
+                },
+                "HashLength": {
+                    "description": "The bit length of the hash data which will be used for the authorization code. Defaults to 20. May not be updated.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ID": {
+                    "description": "The ID of the authorization code definition. Read only.",
+                    "type": "string"
+                },
+                "IsDeleted": {
+                    "description": "Indicates whether this definition is enabled. True if generating codes is disabled.",
+                    "type": "boolean"
+                },
+                "Name": {
+                    "description": "The name of the authorization code definition. May not be updated.",
+                    "type": "string"
+                },
+                "RandomLength": {
+                    "description": "The bit length of random data which will be included in the authorization code.  This is necessary to allow creation of \"identical\" authorization codes containing the same timestamp. Defaults to 5. May not be updated.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ValidationFields": {
+                    "description": "The defined fields to verify when reading authorization codes generated from this definition. May not be updated.",
+                    "items": {
+                        "properties": {
+                            "Name": {
+                                "description": "The name of the field.",
+                                "type": "string"
+                            },
+                            "Type": {
+                                "description": "The type for this validation field.",
+                                "enum": [
+                                    "Boolean",
+                                    "Float",
+                                    "Int",
+                                    "StringCaseInsensitive",
+                                    "StringCaseSensitive"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Type",
+                            "Name"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Name"
+            ],
+            "type": "object"
+        }
+    }
+}

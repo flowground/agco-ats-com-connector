@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "ID": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Active": {
+                    "description": "Default Value: false. During the creation of the Bundle, this field must be false.",
+                    "type": "boolean"
+                },
+                "BundleID": {
+                    "description": "Read-Only.",
+                    "type": "string"
+                },
+                "BundleNumber": {
+                    "description": "The bundle number",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Description": {
+                    "description": "The Bundle description.",
+                    "type": "string"
+                },
+                "UpdateGroupID": {
+                    "description": "The update group this bundle belongs to.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Description",
+                "UpdateGroupID",
+                "BundleNumber"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "ID": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "LicenseVersion": {
+                    "description": "The license version to update",
+                    "type": "string"
+                },
+                "SystemInfo": {
+                    "description": "Information about  the system being activated",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "LicenseVersion"
+            ],
+            "type": "object"
+        }
+    }
+}

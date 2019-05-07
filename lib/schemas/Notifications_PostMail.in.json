@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "CC_Addresses": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "IsBodyHtml": {
+                    "type": "boolean"
+                },
+                "MessageBody": {
+                    "type": "string"
+                },
+                "Subject": {
+                    "type": "string"
+                },
+                "To_Addresses": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "To_Addresses",
+                "Subject",
+                "MessageBody",
+                "IsBodyHtml"
+            ],
+            "type": "object"
+        }
+    }
+}

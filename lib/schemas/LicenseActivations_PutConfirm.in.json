@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "ID": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "LicenseVersion": {
+                    "description": "The license version to confirm",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "LicenseVersion"
+            ],
+            "type": "object"
+        }
+    }
+}

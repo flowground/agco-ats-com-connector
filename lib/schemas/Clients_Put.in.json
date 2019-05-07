@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "ID": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "ClientID": {
+                    "description": "Read Only. The id of the client",
+                    "type": "string"
+                },
+                "LastCheckin": {
+                    "description": "Read Only. The time of the client's last checkin with the server.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Tag": {
+                    "description": "A description of the client that can be used for easy reference",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

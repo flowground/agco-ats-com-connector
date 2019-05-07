@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "VoucherCode": {
+            "required": false,
+            "type": "string"
+        },
+        "DealerCode": {
+            "required": false,
+            "type": "string"
+        },
+        "Status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Active",
+                "Inactive",
+                "All"
+            ]
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

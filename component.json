@@ -1,0 +1,4203 @@
+{
+    "title": "AGCO API",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/agco-ats.com/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://secure.agco-ats.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "AftermarketServices_GetCerts": {
+            "main": "./lib/actions/AftermarketServices_GetCerts.js",
+            "title": "No Documentation Found.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_GetCerts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_PutECU": {
+            "main": "./lib/actions/AftermarketServices_PutECU.js",
+            "title": "Activate or Deactivate an ECU, or Report an ECU as Damaged.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_PutECU.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_GetEngineIQACodes": {
+            "main": "./lib/actions/AftermarketServices_GetEngineIQACodes.js",
+            "title": "Get injector codes given engine.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_GetEngineIQACodes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_PutIQACodes": {
+            "main": "./lib/actions/AftermarketServices_PutIQACodes.js",
+            "title": "Report the IQA codes used by an engine",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_PutIQACodes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_GetProductionData": {
+            "main": "./lib/actions/AftermarketServices_GetProductionData.js",
+            "title": "Get production calibration data for given engine.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_GetProductionData.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_GetConnectionStatus": {
+            "main": "./lib/actions/AftermarketServices_GetConnectionStatus.js",
+            "title": "Check whether there is connectivity to AGCO Power Web Services",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_GetConnectionStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_GetUserStatus": {
+            "main": "./lib/actions/AftermarketServices_GetUserStatus.js",
+            "title": "Retrieve the status of an EDT Kit Registration with AGCO Power Web Services",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_GetUserStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AftermarketServices_UpdateUserStatus": {
+            "main": "./lib/actions/AftermarketServices_UpdateUserStatus.js",
+            "title": "Update the status of an EDT Kit Registration with AGCO Power Web Services",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AftermarketServices_UpdateUserStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Authentication_PutManageTokens": {
+            "main": "./lib/actions/Authentication_PutManageTokens.js",
+            "title": "Manage API tokens.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Authentication_PutManageTokens.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Authentication_Default": {
+            "main": "./lib/actions/Authentication_Default.js",
+            "title": "Authenticate a user.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Authentication_Default.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Authentication_IsAlive": {
+            "main": "./lib/actions/Authentication_IsAlive.js",
+            "title": "Acknowledges the connection to the API",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Authentication_IsAlive.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Authentication_RequestPasswordReset": {
+            "main": "./lib/actions/Authentication_RequestPasswordReset.js",
+            "title": "Request a password reset.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Authentication_RequestPasswordReset.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Authentication_ResetPasword": {
+            "main": "./lib/actions/Authentication_ResetPasword.js",
+            "title": "Reset a password",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Authentication_ResetPasword.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_AuthorizationCodeDefinitions": {
+            "main": "./lib/actions/get_api_v2_AuthorizationCodeDefinitions.js",
+            "title": "Get authorization code definitions.",
+            "description": "Additional searches: validationFields[Name]=true and dataFields[Name]=true. These can be used to search for authorization code definitions that have the specified data or validation fields.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_AuthorizationCodeDefinitions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodeDefinitions_PostAuthorizationCodeDefinition": {
+            "main": "./lib/actions/AuthorizationCodeDefinitions_PostAuthorizationCodeDefinition.js",
+            "title": "Add an authorization code definition.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodeDefinitions_PostAuthorizationCodeDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodeDefinitions_DeleteAuthorizationCodeDefinition": {
+            "main": "./lib/actions/AuthorizationCodeDefinitions_DeleteAuthorizationCodeDefinition.js",
+            "title": "Disable an authorization code definition",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodeDefinitions_DeleteAuthorizationCodeDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_AuthorizationCodeDefinitions__id_": {
+            "main": "./lib/actions/get_api_v2_AuthorizationCodeDefinitions__id_.js",
+            "title": "Get an authorization code definition by its ID",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_AuthorizationCodeDefinitions__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodeDefinitions_PutAuthorizationCodeDefinition": {
+            "main": "./lib/actions/AuthorizationCodeDefinitions_PutAuthorizationCodeDefinition.js",
+            "title": "Update an authorization code definition",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodeDefinitions_PutAuthorizationCodeDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodes_GetAuthorizationCodes": {
+            "main": "./lib/actions/AuthorizationCodes_GetAuthorizationCodes.js",
+            "title": "Get authorization codes.",
+            "description": "Additional searches: validationParameters[Name]=Value and dataParameters[Name]=Value. These can be used to search for authorization codes that have been generated using specified values for data or validation parameters.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodes_GetAuthorizationCodes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodes_PostAuthorizationCode": {
+            "main": "./lib/actions/AuthorizationCodes_PostAuthorizationCode.js",
+            "title": "Generates an authorization code using the provided definition and parameters.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodes_PostAuthorizationCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodes_DeleteAuthorizationCode": {
+            "main": "./lib/actions/AuthorizationCodes_DeleteAuthorizationCode.js",
+            "title": "Hide an authorization code.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodes_DeleteAuthorizationCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodes_GetAuthorizationCode": {
+            "main": "./lib/actions/AuthorizationCodes_GetAuthorizationCode.js",
+            "title": "Get an authorization code by its ID.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodes_GetAuthorizationCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AuthorizationCodes_PutAuthorizationCode": {
+            "main": "./lib/actions/AuthorizationCodes_PutAuthorizationCode.js",
+            "title": "Update an authorization code.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AuthorizationCodes_PutAuthorizationCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Brands_Brands": {
+            "main": "./lib/actions/Brands_Brands.js",
+            "title": "Gets a list of Brands.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Brands_Brands.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Bundles_GetBundles": {
+            "main": "./lib/actions/Bundles_GetBundles.js",
+            "title": "Get the list of bundles.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Bundles_GetBundles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Bundles_PostBundle": {
+            "main": "./lib/actions/Bundles_PostBundle.js",
+            "title": "Add a Bundle to the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Bundles_PostBundle.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Bundles_DeleteBundle": {
+            "main": "./lib/actions/Bundles_DeleteBundle.js",
+            "title": "Delete a Bundle.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Bundles_DeleteBundle.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Bundles_GetBundle": {
+            "main": "./lib/actions/Bundles_GetBundle.js",
+            "title": "Get a specific Bundle by ID.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Bundles_GetBundle.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Bundles_PutBundle": {
+            "main": "./lib/actions/Bundles_PutBundle.js",
+            "title": "Modify a Bundle in the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Bundles_PutBundle.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Clients": {
+            "main": "./lib/actions/get_api_v2_Clients.js",
+            "title": "Get a List of Clients in the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Clients.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateSystem_GetCachedFiles": {
+            "main": "./lib/actions/UpdateSystem_GetCachedFiles.js",
+            "title": "Get a list of Cached Files installed on the client Machine.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateSystem_GetCachedFiles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Clients__ClientID__PackageReports": {
+            "main": "./lib/actions/get_api_v2_Clients__ClientID__PackageReports.js",
+            "title": "Get the package reports for a client.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Clients__ClientID__PackageReports.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_api_v2_Clients__ClientID__PackageReports": {
+            "main": "./lib/actions/put_api_v2_Clients__ClientID__PackageReports.js",
+            "title": "Submit a package report",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_api_v2_Clients__ClientID__PackageReports.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageReports_Batch": {
+            "main": "./lib/actions/PackageReports_Batch.js",
+            "title": "Submit a batch of package reports",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageReports_Batch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Clients__ID_": {
+            "main": "./lib/actions/get_api_v2_Clients__ID_.js",
+            "title": "Get a Client in the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Clients__ID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Clients_Put": {
+            "main": "./lib/actions/Clients_Put.js",
+            "title": "Update a Client.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Clients_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Clients_GetAvailableSubscriptions": {
+            "main": "./lib/actions/Clients_GetAvailableSubscriptions.js",
+            "title": "Get a Client's Available Update Group Subscriptions",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Clients_GetAvailableSubscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Clients_GetSubscriptions": {
+            "main": "./lib/actions/Clients_GetSubscriptions.js",
+            "title": "Get a Client's Current Update Group Subscriptions",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Clients_GetSubscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentDefinitions_GetContentDefinitions": {
+            "main": "./lib/actions/ContentDefinitions_GetContentDefinitions.js",
+            "title": "Get ContentDefinitions",
+            "description": "Gets a collection of ContentDefinitions. When successful, the response is a PagedResponse of ContentDefinitions.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentDefinitions_GetContentDefinitions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentDefinitions_PostContentDefinition": {
+            "main": "./lib/actions/ContentDefinitions_PostContentDefinition.js",
+            "title": "Create a ContentDefinition",
+            "description": "Creates a ContentDefinition.  The body of the POST is the ContentDefinition to create.\r\n            The ContentDefinitionID will be assigned on creation of the Job.  When successful, the response\r\n            is the JobID.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentDefinitions_PostContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentDefinitions_DeleteContentDefinition": {
+            "main": "./lib/actions/ContentDefinitions_DeleteContentDefinition.js",
+            "title": "Delete a ContentDefinition",
+            "description": "Deletes an ContentDefinition. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentDefinitions_DeleteContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentDefinitions_GetContentDefinition": {
+            "main": "./lib/actions/ContentDefinitions_GetContentDefinition.js",
+            "title": "Get a ContentDefinition by ID",
+            "description": "Gets a ContentDefinition by ID. When successful, the response is the requested ContentDefinition.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentDefinitions_GetContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentDefinitions_PutContentDefinition": {
+            "main": "./lib/actions/ContentDefinitions_PutContentDefinition.js",
+            "title": "Update a ContentDefinition",
+            "description": "Updates a ContentDefinition.  The body of the PUT is the updated ContentDefinition.  \r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentDefinitions_PutContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_ContentReleases": {
+            "main": "./lib/actions/get_api_v2_ContentReleases.js",
+            "title": "Get ContentReleaseVersion",
+            "description": "Gets a collection of ContentReleaseVersion. When successful, the response is a PagedResponse of ContentReleaseVersion.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_ContentReleases.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentRelease_PostContentRelease": {
+            "main": "./lib/actions/ContentRelease_PostContentRelease.js",
+            "title": "Create a ContentReleaseVersion",
+            "description": "Creates a ContentReleaseVersion.  The body of the POST is the ContentReleaseVersion to create.\r\n            The ContentReleaseId will be assigned on creation of the Job.  When successful, the response\r\n            is the contentReleaseId.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentRelease_PostContentRelease.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentRelease_DeleteContentReleaseVersionn": {
+            "main": "./lib/actions/ContentRelease_DeleteContentReleaseVersionn.js",
+            "title": "Delete a ContentReleaseVersion",
+            "description": "Deletes an ContentReleaseVersion. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentRelease_DeleteContentReleaseVersionn.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_ContentReleases__ContentReleaseId_": {
+            "main": "./lib/actions/get_api_v2_ContentReleases__ContentReleaseId_.js",
+            "title": "Get a Content Release Version by ID",
+            "description": "Gets a ContentReleaseVersion by ID. When successful, the response is the requested ContentReleaseVersion.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_ContentReleases__ContentReleaseId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentRelease_PutContentDefinition": {
+            "main": "./lib/actions/ContentRelease_PutContentDefinition.js",
+            "title": "Update a ContentReleaseVersion",
+            "description": "Updates a ContentReleaseVersion.  The body of the PUT is the updated ContentReleaseVersion.  \r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentRelease_PutContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissionTypes_GetContentSubmissionTypes": {
+            "main": "./lib/actions/ContentSubmissionTypes_GetContentSubmissionTypes.js",
+            "title": "Returns available Content Submission Types.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissionTypes_GetContentSubmissionTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissionTypes_PostContentSubmissionType": {
+            "main": "./lib/actions/ContentSubmissionTypes_PostContentSubmissionType.js",
+            "title": "Add a Content Submission Type",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissionTypes_PostContentSubmissionType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissionTypes_DeleteContentSubmissionType": {
+            "main": "./lib/actions/ContentSubmissionTypes_DeleteContentSubmissionType.js",
+            "title": "Remove a Content Submission Type",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissionTypes_DeleteContentSubmissionType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissionTypes_GetContentSubmissionType": {
+            "main": "./lib/actions/ContentSubmissionTypes_GetContentSubmissionType.js",
+            "title": "Retrieves a Content Submission Type by its ID.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissionTypes_GetContentSubmissionType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissionTypes_PutContentSubmissionType": {
+            "main": "./lib/actions/ContentSubmissionTypes_PutContentSubmissionType.js",
+            "title": "Update a Content Submission Type",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissionTypes_PutContentSubmissionType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissions_GetContentSubmissions": {
+            "main": "./lib/actions/ContentSubmissions_GetContentSubmissions.js",
+            "title": "Get ContentSubmissions",
+            "description": "Gets a collection of ContentSubmissions. When successful, the response is a PagedResponse of ContentSubmissions.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissions_GetContentSubmissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissions_PostContentSubmission": {
+            "main": "./lib/actions/ContentSubmissions_PostContentSubmission.js",
+            "title": "Create a ContentSubmission",
+            "description": "Creates a ContentSubmission.  The body of the POST is the ContentSubmission to create.\r\n            The ContentSubmissionID will be assigned on creation of the Job.  When successful, the response\r\n            is the ContentSubmissionID.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissions_PostContentSubmission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissions_DeleteContentSubmission": {
+            "main": "./lib/actions/ContentSubmissions_DeleteContentSubmission.js",
+            "title": "Delete a ContentSubmission",
+            "description": "Deletes an ContentSubmission. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissions_DeleteContentSubmission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissions_GetContentSubmission": {
+            "main": "./lib/actions/ContentSubmissions_GetContentSubmission.js",
+            "title": "Get a ContentSubmission by ID",
+            "description": "Gets a ContentSubmission by ID. When successful, the response is the requested ContentSubmission.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissions_GetContentSubmission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ContentSubmissions_PutContentSubmission": {
+            "main": "./lib/actions/ContentSubmissions_PutContentSubmission.js",
+            "title": "Update a ContentSubmission",
+            "description": "Updates a ContentSubmission.  The body of the PUT is the updated ContentSubmission.  \r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ContentSubmissions_PutContentSubmission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DealerByCountry_GetCountries": {
+            "main": "./lib/actions/DealerByCountry_GetCountries.js",
+            "title": "Get a total count of dealers per country",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DealerByCountry_GetCountries.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Dealers_GetDealers": {
+            "main": "./lib/actions/Dealers_GetDealers.js",
+            "title": "Get a list of dealers.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Dealers_GetDealers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Dealers_GetDealerbyDealerCode": {
+            "main": "./lib/actions/Dealers_GetDealerbyDealerCode.js",
+            "title": "Lookup a dealer using a dealer code.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Dealers_GetDealerbyDealerCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LicenseActivations_Post": {
+            "main": "./lib/actions/LicenseActivations_Post.js",
+            "title": "Create a license activation.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LicenseActivations_Post.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LicenseActivations_PostRegisterEDTLite": {
+            "main": "./lib/actions/LicenseActivations_PostRegisterEDTLite.js",
+            "title": "Register an EDT Lite with the Server",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LicenseActivations_PostRegisterEDTLite.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LicenseActivations_Put": {
+            "main": "./lib/actions/LicenseActivations_Put.js",
+            "title": "Update a license activiation.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LicenseActivations_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LicenseActivations_PutConfirm": {
+            "main": "./lib/actions/LicenseActivations_PutConfirm.js",
+            "title": "Confirm that the client has applied the updated license.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LicenseActivations_PutConfirm.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Licenses": {
+            "main": "./lib/actions/get_api_v2_Licenses.js",
+            "title": "Gets a list of licenses with the specified criteria.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Licenses.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Licenses__ID_": {
+            "main": "./lib/actions/get_api_v2_Licenses__ID_.js",
+            "title": "Get a license.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Licenses__ID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Logs_GetLogs": {
+            "main": "./lib/actions/Logs_GetLogs.js",
+            "title": "Get the API System logs, most recent first.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Logs_GetLogs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Logs_PostLog": {
+            "main": "./lib/actions/Logs_PostLog.js",
+            "title": "Add a Log entry",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Logs_PostLog.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Logs_GetLog": {
+            "main": "./lib/actions/Logs_GetLog.js",
+            "title": "Get a log by ID",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Logs_GetLog.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Notifications_PostMail": {
+            "main": "./lib/actions/Notifications_PostMail.js",
+            "title": "Sends an email message.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Notifications_PostMail.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_PackageTypes": {
+            "main": "./lib/actions/get_api_v2_PackageTypes.js",
+            "title": "Get all of the Package Types.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_PackageTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypes_Post": {
+            "main": "./lib/actions/PackageTypes_Post.js",
+            "title": "Add a Package Type.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypes_Post.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypes_Delete": {
+            "main": "./lib/actions/PackageTypes_Delete.js",
+            "title": "Delete a Package Type.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypes_Delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_PackageTypes__ID_": {
+            "main": "./lib/actions/get_api_v2_PackageTypes__ID_.js",
+            "title": "Get a specific Package Type.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_PackageTypes__ID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypes_Put": {
+            "main": "./lib/actions/PackageTypes_Put.js",
+            "title": "Modify a Package Type.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypes_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypetoBundles_Delete": {
+            "main": "./lib/actions/PackageTypetoBundles_Delete.js",
+            "title": "Delete a Package Type to Bundle Relationship.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypetoBundles_Delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypetoBundles_Get": {
+            "main": "./lib/actions/PackageTypetoBundles_Get.js",
+            "title": "Get all of the Package Type to Bundle Relationships.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypetoBundles_Get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypetoBundles_Post": {
+            "main": "./lib/actions/PackageTypetoBundles_Post.js",
+            "title": "Add a new Package Type ID to Bundle Relationship.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypetoBundles_Post.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PackageTypetoBundles_Put": {
+            "main": "./lib/actions/PackageTypetoBundles_Put.js",
+            "title": "Update a Package Type ID to Bundle Relationship.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PackageTypetoBundles_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Packages_GetPackages": {
+            "main": "./lib/actions/Packages_GetPackages.js",
+            "title": "List Packages.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Packages_GetPackages.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Packages_PostPackage": {
+            "main": "./lib/actions/Packages_PostPackage.js",
+            "title": "Add a Packge to the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Packages_PostPackage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Packages_DeletePackage": {
+            "main": "./lib/actions/Packages_DeletePackage.js",
+            "title": "Delete a Package.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Packages_DeletePackage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Packages_GetPackage": {
+            "main": "./lib/actions/Packages_GetPackage.js",
+            "title": "Find a Package.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Packages_GetPackage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Packages_PutPackage": {
+            "main": "./lib/actions/Packages_PutPackage.js",
+            "title": "Modify a Packge to the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Packages_PutPackage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Permissions_GetPermissions": {
+            "main": "./lib/actions/Permissions_GetPermissions.js",
+            "title": "List Permissions",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Permissions_GetPermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Permissions_PostPermission": {
+            "main": "./lib/actions/Permissions_PostPermission.js",
+            "title": "Adds a Permission",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Permissions_PostPermission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Permissions_DeletePermission": {
+            "main": "./lib/actions/Permissions_DeletePermission.js",
+            "title": "Deletes a Permission",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Permissions_DeletePermission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Permissions_GetPermission": {
+            "main": "./lib/actions/Permissions_GetPermission.js",
+            "title": "Gets a Permission",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Permissions_GetPermission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Permissions_PutPermission": {
+            "main": "./lib/actions/Permissions_PutPermission.js",
+            "title": "Updates a Permission",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Permissions_PutPermission.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PriorityPackages_GetPriorityPackages": {
+            "main": "./lib/actions/PriorityPackages_GetPriorityPackages.js",
+            "title": "Get a list of Priority Packages by Client.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PriorityPackages_GetPriorityPackages.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PriorityPackages_PostPriorityPackages": {
+            "main": "./lib/actions/PriorityPackages_PostPriorityPackages.js",
+            "title": "Add a Priority Package for a Client.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PriorityPackages_PostPriorityPackages.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PriorityPackages_DeletePriorityPackages": {
+            "main": "./lib/actions/PriorityPackages_DeletePriorityPackages.js",
+            "title": "Delete a Priority Package for a Client.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PriorityPackages_DeletePriorityPackages.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PriorityPackages_GetPriorityPackage": {
+            "main": "./lib/actions/PriorityPackages_GetPriorityPackage.js",
+            "title": "Get a Priority Packages for a Client.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PriorityPackages_GetPriorityPackage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Release_GetReleases": {
+            "main": "./lib/actions/Release_GetReleases.js",
+            "title": "Get Release",
+            "description": "Gets a collection of Release. When successful, the response is a PagedResponse of Release.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Release_GetReleases.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Release_PostRelease": {
+            "main": "./lib/actions/Release_PostRelease.js",
+            "title": "Create a Release",
+            "description": "Creates a Release.  The body of the POST is the Release to create.\r\n            The ReleaseId will be assigned on creation of the Job.  When successful, the response\r\n            is the Release Id.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Release_PostRelease.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Release_GetRelease": {
+            "main": "./lib/actions/Release_GetRelease.js",
+            "title": "Get a  Release by ID",
+            "description": "Gets a Release by ID. When successful, the response is the requested Release.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Release_GetRelease.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Release_PutContentDefinition": {
+            "main": "./lib/actions/Release_PutContentDefinition.js",
+            "title": "Update a Release",
+            "description": "Updates a Release.  The body of the PUT is the updated Release.  \r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Release_PutContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_BundleStatusSummary": {
+            "main": "./lib/actions/Reporting_BundleStatusSummary.js",
+            "title": "Get a summary of all Packages in a Bundle",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_BundleStatusSummary.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_BundlesInUpdateGroup": {
+            "main": "./lib/actions/Reporting_BundlesInUpdateGroup.js",
+            "title": "Get a list of bundles for UpdateGroup.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_BundlesInUpdateGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_ClientInfo": {
+            "main": "./lib/actions/Reporting_ClientInfo.js",
+            "title": "Get Client Information",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_ClientInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_CurrentPackagesInUpdateGroup": {
+            "main": "./lib/actions/Reporting_CurrentPackagesInUpdateGroup.js",
+            "title": "Get the current packages for an update group.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_CurrentPackagesInUpdateGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_GetClient": {
+            "main": "./lib/actions/Reporting_GetClient.js",
+            "title": "Get a Client in the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_GetClient.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_GetSubscriptions": {
+            "main": "./lib/actions/Reporting_GetSubscriptions.js",
+            "title": "Get a list of current Client Subscriptions.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_GetSubscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_PackageStatusSummary": {
+            "main": "./lib/actions/Reporting_PackageStatusSummary.js",
+            "title": "Get a summary report for a Specific Package",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_PackageStatusSummary.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_RegisteredClients": {
+            "main": "./lib/actions/Reporting_RegisteredClients.js",
+            "title": "Get a list of subscribed clients",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_RegisteredClients.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_UpdateGroups": {
+            "main": "./lib/actions/Reporting_UpdateGroups.js",
+            "title": "Get a list of Update Groups.  Update Groups are used by the client to register for a specific type of update.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_UpdateGroups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Reporting_UpdateMetrics": {
+            "main": "./lib/actions/Reporting_UpdateMetrics.js",
+            "title": "Get data for pie charts in UpdateMetrics.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Reporting_UpdateMetrics.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_GetRoles": {
+            "main": "./lib/actions/Roles_GetRoles.js",
+            "title": "List Roles",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_GetRoles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_PostRole": {
+            "main": "./lib/actions/Roles_PostRole.js",
+            "title": "Adds a User Role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_PostRole.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_DeleteRole": {
+            "main": "./lib/actions/Roles_DeleteRole.js",
+            "title": "Deletes a User Role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_DeleteRole.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_GetRole": {
+            "main": "./lib/actions/Roles_GetRole.js",
+            "title": "Gets a User Role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_GetRole.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_PutRole": {
+            "main": "./lib/actions/Roles_PutRole.js",
+            "title": "Updates a User Role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_PutRole.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_GetRolePermissions": {
+            "main": "./lib/actions/Roles_GetRolePermissions.js",
+            "title": "Get the Permissions for a Role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_GetRolePermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Roles_PutRolePermissions": {
+            "main": "./lib/actions/Roles_PutRolePermissions.js",
+            "title": "Manage the Permissions for a Role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Roles_PutRolePermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserPermissions_GetUsers": {
+            "main": "./lib/actions/UserPermissions_GetUsers.js",
+            "title": "Get all user's in a role",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserPermissions_GetUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_api_v2_Roles__id__Users": {
+            "main": "./lib/actions/put_api_v2_Roles__id__Users.js",
+            "title": "Update a Role's users",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_api_v2_Roles__id__Users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupClientRelationships_GetSubscriptions": {
+            "main": "./lib/actions/UpdateGroupClientRelationships_GetSubscriptions.js",
+            "title": "Get a list of current Client Subscriptions.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupClientRelationships_GetSubscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupClientRelationships_PostSubscription": {
+            "main": "./lib/actions/UpdateGroupClientRelationships_PostSubscription.js",
+            "title": "Add a subscription",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupClientRelationships_PostSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupClientRelationships_PutSubscriptionByClientIDUpdateGroupID": {
+            "main": "./lib/actions/UpdateGroupClientRelationships_PutSubscriptionByClientIDUpdateGroupID.js",
+            "title": "DEPRECATED. Set client subscription status for an update group.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupClientRelationships_PutSubscriptionByClientIDUpdateGroupID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupClientRelationships_GetSubscription": {
+            "main": "./lib/actions/UpdateGroupClientRelationships_GetSubscription.js",
+            "title": "Get a subscription by RelationshipID",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupClientRelationships_GetSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupClientRelationships_PutSubscription": {
+            "main": "./lib/actions/UpdateGroupClientRelationships_PutSubscription.js",
+            "title": "Updates a Subscription",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupClientRelationships_PutSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupSubscriptions_GetUpdateGroupSubscriptions": {
+            "main": "./lib/actions/UpdateGroupSubscriptions_GetUpdateGroupSubscriptions.js",
+            "title": "Get Update Group Subscriptions",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupSubscriptions_GetUpdateGroupSubscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupSubscriptions_PostUpdateGroupSubscription": {
+            "main": "./lib/actions/UpdateGroupSubscriptions_PostUpdateGroupSubscription.js",
+            "title": "Add an Update Group Subscription",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupSubscriptions_PostUpdateGroupSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupSubscriptions_DeleteUpdateGroupSubscription": {
+            "main": "./lib/actions/UpdateGroupSubscriptions_DeleteUpdateGroupSubscription.js",
+            "title": "Delete an Update Group Subscription",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupSubscriptions_DeleteUpdateGroupSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupSubscriptions_GetUpdateGroupSubscription": {
+            "main": "./lib/actions/UpdateGroupSubscriptions_GetUpdateGroupSubscription.js",
+            "title": "Get an Update Group Subscription",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupSubscriptions_GetUpdateGroupSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroupSubscriptions_PutUpdateGroupSubscription": {
+            "main": "./lib/actions/UpdateGroupSubscriptions_PutUpdateGroupSubscription.js",
+            "title": "Update an Update Group Subscription",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroupSubscriptions_PutUpdateGroupSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_UpdateGroups": {
+            "main": "./lib/actions/get_api_v2_UpdateGroups.js",
+            "title": "Get a list of Update Groups.  Update Groups are used by the client to register for a specific type of update.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_UpdateGroups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroups_Post": {
+            "main": "./lib/actions/UpdateGroups_Post.js",
+            "title": "Add a new Update Group.  The report field is a string that has a dot based request for a specific piece of submitted data.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroups_Post.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroups_Delete": {
+            "main": "./lib/actions/UpdateGroups_Delete.js",
+            "title": "Delete an Update Group.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroups_Delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_UpdateGroups__ID_": {
+            "main": "./lib/actions/get_api_v2_UpdateGroups__ID_.js",
+            "title": "Get a specific Update Group by ID.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_UpdateGroups__ID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroups_Put": {
+            "main": "./lib/actions/UpdateGroups_Put.js",
+            "title": "Modify an Update Group.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroups_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGroups_GetUpdateGroupBundles": {
+            "main": "./lib/actions/UpdateGroups_GetUpdateGroupBundles.js",
+            "title": "Get a list of bundles for UpdateGroup.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGroups_GetUpdateGroupBundles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateSystem_GetCheckin": {
+            "main": "./lib/actions/UpdateSystem_GetCheckin.js",
+            "title": "Checks the Client ID into the Update System.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateSystem_GetCheckin.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserContentDefinitions_GetUserContentDefinitions": {
+            "main": "./lib/actions/UserContentDefinitions_GetUserContentDefinitions.js",
+            "title": "Get UserContentDefinitions",
+            "description": "Gets a collection of UserContentDefinitions. When successful, the response is a PagedResponse of UserContentDefinitions.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserContentDefinitions_GetUserContentDefinitions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserContentDefinitions_PostUserContentDefinition": {
+            "main": "./lib/actions/UserContentDefinitions_PostUserContentDefinition.js",
+            "title": "Create a UserContentDefinition",
+            "description": "Creates a UserContentDefinition.  The body of the POST is the UserContentDefinition to create.\r\n            The UserContentDefinitionID will be assigned on creation of the Job.  When successful, the response\r\n            is the UserContentDefinitionID.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserContentDefinitions_PostUserContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserContentDefinitions_DeleteUserContentDefinition": {
+            "main": "./lib/actions/UserContentDefinitions_DeleteUserContentDefinition.js",
+            "title": "Delete a UserContentDefinition",
+            "description": "Deletes an UserContentDefinition. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserContentDefinitions_DeleteUserContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserContentDefinitions_GetUserContentDefinition": {
+            "main": "./lib/actions/UserContentDefinitions_GetUserContentDefinition.js",
+            "title": "Get a UserContentDefinition by ID",
+            "description": "Gets a UserContentDefinition by ID. When successful, the response is the requested UserContentDefinition.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserContentDefinitions_GetUserContentDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Users": {
+            "main": "./lib/actions/get_api_v2_Users.js",
+            "title": "Get users",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Users_Post": {
+            "main": "./lib/actions/Users_Post.js",
+            "title": "Create a user",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Users_Post.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Users_GetCurrentUser": {
+            "main": "./lib/actions/Users_GetCurrentUser.js",
+            "title": "Gets the current user",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Users_GetCurrentUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Users_PutCurrentUser": {
+            "main": "./lib/actions/Users_PutCurrentUser.js",
+            "title": "Update a user",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Users_PutCurrentUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Users_Current_Permissions": {
+            "main": "./lib/actions/get_api_v2_Users_Current_Permissions.js",
+            "title": "Get a user's permissions",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Users_Current_Permissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserPermissions_GetCurrentUserRoles": {
+            "main": "./lib/actions/UserPermissions_GetCurrentUserRoles.js",
+            "title": "Gets the current user's roles",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserPermissions_GetCurrentUserRoles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Users_Delete": {
+            "main": "./lib/actions/Users_Delete.js",
+            "title": "Delete a user",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Users_Delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Users__id_": {
+            "main": "./lib/actions/get_api_v2_Users__id_.js",
+            "title": "Get a specific user",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Users__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Users_Put": {
+            "main": "./lib/actions/Users_Put.js",
+            "title": "Update a user",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Users_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Users__id__Permissions": {
+            "main": "./lib/actions/get_api_v2_Users__id__Permissions.js",
+            "title": "Get a user's permissions",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Users__id__Permissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserPermissions_GetRoles": {
+            "main": "./lib/actions/UserPermissions_GetRoles.js",
+            "title": "Get a user's roles",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserPermissions_GetRoles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_api_v2_Users__id__Roles": {
+            "main": "./lib/actions/put_api_v2_Users__id__Roles.js",
+            "title": "Update a user's roles",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_api_v2_Users__id__Roles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "VoucherHistory_GetVoucherHistory": {
+            "main": "./lib/actions/VoucherHistory_GetVoucherHistory.js",
+            "title": "Gets voucher history data",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/VoucherHistory_GetVoucherHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Vouchers": {
+            "main": "./lib/actions/get_api_v2_Vouchers.js",
+            "title": "Gets a list of vouchers",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Vouchers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Vouchers_Post": {
+            "main": "./lib/actions/Vouchers_Post.js",
+            "title": "Create a voucher",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Vouchers_Post.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Vouchers_Delete": {
+            "main": "./lib/actions/Vouchers_Delete.js",
+            "title": "Delete a voucher",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Vouchers_Delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v2_Vouchers__VoucherCode_": {
+            "main": "./lib/actions/get_api_v2_Vouchers__VoucherCode_.js",
+            "title": "Get a voucher",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v2_Vouchers__VoucherCode_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Vouchers_Put": {
+            "main": "./lib/actions/Vouchers_Put.js",
+            "title": "Update a voucher",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Vouchers_Put.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Vouchers_GetVoucherHistory": {
+            "main": "./lib/actions/Vouchers_GetVoucherHistory.js",
+            "title": "Get a voucher's history.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Vouchers_GetVoucherHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Activities_GetActivities": {
+            "main": "./lib/actions/Activities_GetActivities.js",
+            "title": "Get Activities",
+            "description": "Gets a collection of Activities. When successful, the response is a PagedResponse of Activities.  \r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Activities_GetActivities.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Activities_PostActivity": {
+            "main": "./lib/actions/Activities_PostActivity.js",
+            "title": "Create an Activity",
+            "description": "Creates an Activity.  The body of the POST is the Activity to create.  The ActivityID will be assigned\r\n            on creation of the Activity.  When successful, the response is the ActivityID.  If unsuccessful, an \r\n            appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Activities_PostActivity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Activities_DeleteActivity": {
+            "main": "./lib/actions/Activities_DeleteActivity.js",
+            "title": "Mark the delete flag for the Activity",
+            "description": "Deletes an Activity. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Activities_DeleteActivity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Activities_GetActivity": {
+            "main": "./lib/actions/Activities_GetActivity.js",
+            "title": "Get an Activity by ID",
+            "description": "Gets an Activity by ID. When successful, the response is the requested Activity.  If unsuccessful,\r\n            an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Activities_GetActivity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Activities_PutActivity": {
+            "main": "./lib/actions/Activities_PutActivity.js",
+            "title": "Update an Activity",
+            "description": "Updates an Activity.  The body of the PUT is the updated Activity.  When successful, the response is empty.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Activities_PutActivity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ActivityRuns_GetActivityRuns": {
+            "main": "./lib/actions/ActivityRuns_GetActivityRuns.js",
+            "title": "Get ActivityRuns",
+            "description": "Gets a collection of ActivityRuns. When successful, the response is a PagedResponse of ActivityRuns.  \r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ActivityRuns_GetActivityRuns.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ActivityRuns_GetActivityRun": {
+            "main": "./lib/actions/ActivityRuns_GetActivityRun.js",
+            "title": "Get an ActivityRun by ID",
+            "description": "Gets an ActivityRun by ID. When successful, the response is the requested ActivityRun.  If unsuccessful,\r\n            an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ActivityRuns_GetActivityRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ActivityRuns_PutActivityRun": {
+            "main": "./lib/actions/ActivityRuns_PutActivityRun.js",
+            "title": "Update an ActivityRun",
+            "description": "Updates the ActivityRunStatus of an ActivityRun.  The body of the PUT is the updated ActivityRunStatus.\r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ActivityRuns_PutActivityRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ActivityRuns_GetActivityRunStatus": {
+            "main": "./lib/actions/ActivityRuns_GetActivityRunStatus.js",
+            "title": "Get the ActivityRunStatus of an ActivityRun",
+            "description": "Gets the ActivityRunStatus of an ActivityRun.  When successful, the response is the requested ActivityRunStatus.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ActivityRuns_GetActivityRunStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ActivityRuns_PutActivityRunStatus": {
+            "main": "./lib/actions/ActivityRuns_PutActivityRunStatus.js",
+            "title": "Update the ActivityRunStatus of an ActivityRun",
+            "description": "Updates the ActivityRunStatus of an ActivityRun.  The body of the PUT is the updated ActivityRunStatus.\r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ActivityRuns_PutActivityRunStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_GetAgents": {
+            "main": "./lib/actions/Agents_GetAgents.js",
+            "title": "Get Agents",
+            "description": "Gets a collection of Agents. When successful, the response is a PagedResponse of Agents.  \r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_GetAgents.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_PostAgent": {
+            "main": "./lib/actions/Agents_PostAgent.js",
+            "title": "Create an Agent",
+            "description": "Creates an Agent.  The body of the POST is the Agent to create.  The AgentID will be assigned\r\n            on creation of the Agent.  When successful, the response is the AgentID.  If unsuccessful, an\r\n            appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_PostAgent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_GetCurrentAgentAsync": {
+            "main": "./lib/actions/Agents_GetCurrentAgentAsync.js",
+            "title": "Get Agent associated with the current user",
+            "description": "Gets the Agent associated with the current user. When successful, the response is the requested Agent.  If unsuccessful,\r\n            an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_GetCurrentAgentAsync.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_GetCurrentAgentActivityRun": {
+            "main": "./lib/actions/Agents_GetCurrentAgentActivityRun.js",
+            "title": "Get the ActivityRun of Agent associated with the current user",
+            "description": "Gets the activity run assigned to an agent.  When successful, the response is the ActivityRun\r\n            assigned to the Agent.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_GetCurrentAgentActivityRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_DeleteAgent": {
+            "main": "./lib/actions/Agents_DeleteAgent.js",
+            "title": "Delete an Agent",
+            "description": "Deletes an Agent. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_DeleteAgent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_GetAgentAsync": {
+            "main": "./lib/actions/Agents_GetAgentAsync.js",
+            "title": "Get Agent",
+            "description": "Gets an Agent by ID. When successful, the response is the requested Agent.  If unsuccessful,\r\n            an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_GetAgentAsync.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_PutAgent": {
+            "main": "./lib/actions/Agents_PutAgent.js",
+            "title": "Update an Agent",
+            "description": "Updates an Agent.  The body of the PUT is the updated Agent.  When successful, the response is empty.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_PutAgent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_GetAgentActivityRun": {
+            "main": "./lib/actions/Agents_GetAgentActivityRun.js",
+            "title": "Get an Agent's ActivityRun",
+            "description": "Gets the activity run assigned to an agent.  When successful, the response is the ActivityRun\r\n            assigned to the Agent.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_GetAgentActivityRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_PutAgentActivityRun": {
+            "main": "./lib/actions/Agents_PutAgentActivityRun.js",
+            "title": "Update the ActivityRun assigned to the Agent.",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_PutAgentActivityRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Agents_PutAgentStatus": {
+            "main": "./lib/actions/Agents_PutAgentStatus.js",
+            "title": "Update an Agent",
+            "description": "Updates the status of an Agent.The body of the PUT is the updated Agent status.  When successful,\r\n            the response is empty.If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Agents_PutAgentStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "JobRuns_GetJobRuns": {
+            "main": "./lib/actions/JobRuns_GetJobRuns.js",
+            "title": "Get JobRuns",
+            "description": "Gets a collection of JobRuns. When successful, the response is a PagedResponse of JobRuns.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/JobRuns_GetJobRuns.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "JobRuns_PostJobRun": {
+            "main": "./lib/actions/JobRuns_PostJobRun.js",
+            "title": "Create a JobRun",
+            "description": "Creates a JobRun.  The body of the POST is the JobRun to create.  The JobRunID will be assigned on\r\n            creation of the JobRun.  When successful, the response is the JobRunID.  If unsuccessful, an \r\n            appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/JobRuns_PostJobRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "JobRuns_DeleteJobRun": {
+            "main": "./lib/actions/JobRuns_DeleteJobRun.js",
+            "title": "Delete a JobRun",
+            "description": "Deletes a JobRun. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/JobRuns_DeleteJobRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "JobRuns_GetJobRun": {
+            "main": "./lib/actions/JobRuns_GetJobRun.js",
+            "title": "Get a JobRun by ID",
+            "description": "Gets a JobRun by ID. When successful, the response is the requested JobRun.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/JobRuns_GetJobRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "JobRuns_PutJobRun": {
+            "main": "./lib/actions/JobRuns_PutJobRun.js",
+            "title": "Update a JobRun",
+            "description": "/// \r\n            Updates a JobRun.  The body of the PUT is the updated JobRun.\r\n            When successful, the response is empty.  If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/JobRuns_PutJobRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Jobs_GetJobs": {
+            "main": "./lib/actions/Jobs_GetJobs.js",
+            "title": "Get Jobs",
+            "description": "Gets a collection of Jobs. When successful, the response is a PagedResponse of Jobs.\r\n            If unsuccessful, an appropriate ApiError is returned. \r\n            ///",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Jobs_GetJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Jobs_PostJob": {
+            "main": "./lib/actions/Jobs_PostJob.js",
+            "title": "Create a Job",
+            "description": "Creates a Job.  The body of the POST is the Job to create.  The JobID will be assigned on\r\n            creation of the Job.  When successful, the response is the JobID.  If unsuccessful, an \r\n            appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Jobs_PostJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Jobs_DeleteJob": {
+            "main": "./lib/actions/Jobs_DeleteJob.js",
+            "title": "Mark the delete flag for the Job",
+            "description": "Deletes a Job. When successful, the response is empty.  If unsuccessful, an appropriate\r\n            ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Jobs_DeleteJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Jobs_GetJob": {
+            "main": "./lib/actions/Jobs_GetJob.js",
+            "title": "Get a Job by ID",
+            "description": "Gets a Job by ID. When successful, the response is the requested Job.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Jobs_GetJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Jobs_PutJob": {
+            "main": "./lib/actions/Jobs_PutJob.js",
+            "title": "Update a Job",
+            "description": "Updates a Job.  The body of the PUT is the updated Job.  When successful, the response is empty.\r\n            If unsuccessful, an appropriate ApiError is returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Jobs_PutJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Steps_GetSteps": {
+            "main": "./lib/actions/Steps_GetSteps.js",
+            "title": "Get Steps",
+            "description": "Gets a collection of Steps. When successful, the response is a PagedResponse of Steps.\r\n            If unsuccessful, an appropriate ApiError is returned.  Steps.Read permission is required.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Steps_GetSteps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Steps_PostStep": {
+            "main": "./lib/actions/Steps_PostStep.js",
+            "title": "Create a Step",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Steps_PostStep.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Steps_GetStep": {
+            "main": "./lib/actions/Steps_GetStep.js",
+            "title": "Get a Step by ID",
+            "description": "Gets a Step by ID. When successful, the response is the requested Step.\r\n            If unsuccessful, an appropriate ApiError is returned.  Steps.Read permission is required.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Steps_GetStep.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Steps_PutStep": {
+            "main": "./lib/actions/Steps_PutStep.js",
+            "title": "Update a Step",
+            "description": "No Documentation Found.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "text/json": "text/json",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-www-form-urlencoded": "application/x-www-form-urlencoded"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Steps_PutStep.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

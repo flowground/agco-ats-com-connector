@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "Autorun": {
+                    "description": "Read Only. From the package specified by package ID.\r\n            Value is true if package should run automatically. Default value is false.",
+                    "type": "boolean"
+                },
+                "CRC": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "string"
+                },
+                "ClientID": {
+                    "description": "The ID of the client to receive the priority package",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "string"
+                },
+                "Notes": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "string"
+                },
+                "PackageID": {
+                    "description": "The ID of the package to push as a priority package.",
+                    "type": "string"
+                },
+                "PackageTypeID": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "string"
+                },
+                "PreviousVersion": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PriorityPackageID": {
+                    "description": "Read Only. The ID of the priority package.",
+                    "type": "string"
+                },
+                "ReleaseDate": {
+                    "description": "Read Only. From the package specified by package ID.\r\n            The date the package was released",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Released": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "boolean"
+                },
+                "RemoveOnSuccess": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "boolean"
+                },
+                "Size": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "Switches": {
+                    "description": "The command line arguments for the priority package.  Default value is an empty string.",
+                    "type": "string"
+                },
+                "TimeStamp": {
+                    "description": "Read Only. The timestamp of the priority package.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Url": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "type": "string"
+                },
+                "Version": {
+                    "description": "Read Only. From the package specified by package ID.",
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "ClientID",
+                "PackageID"
+            ],
+            "type": "object"
+        }
+    }
+}

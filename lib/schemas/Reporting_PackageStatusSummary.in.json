@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "PackageID": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

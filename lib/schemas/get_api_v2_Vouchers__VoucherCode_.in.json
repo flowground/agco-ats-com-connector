@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "VoucherCode": {
+            "required": true,
+            "type": "string"
+        },
+        "Deleted": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "NotDeleted",
+                "Deleted",
+                "All"
+            ]
+        }
+    }
+}

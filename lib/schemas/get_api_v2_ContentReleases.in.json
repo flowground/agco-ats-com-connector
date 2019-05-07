@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "deleted": {
+            "required": false,
+            "type": "boolean"
+        },
+        "releaseID": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "userId": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "contentDefinitionID": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "version": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

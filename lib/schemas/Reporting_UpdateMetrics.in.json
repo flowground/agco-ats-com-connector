@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "UpdateGroupID": {
+            "required": true,
+            "type": "string"
+        },
+        "bundleNumber": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

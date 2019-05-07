@@ -1,0 +1,80 @@
+{
+    "type": "object",
+    "properties": {
+        "stepID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "description": "Step",
+            "properties": {
+                "ConfigRequired": {
+                    "description": "Indicates if the step requires configuration values to be provided by the build agent",
+                    "type": "boolean"
+                },
+                "Deleted": {
+                    "description": "Read Only.  Indicates if the record is deleted.",
+                    "type": "boolean"
+                },
+                "Description": {
+                    "description": "A description of the step to be presented to a user",
+                    "type": "string"
+                },
+                "ImplementationID": {
+                    "description": "The implementation ID used to lookup the step implementation when it is executed",
+                    "type": "string"
+                },
+                "Name": {
+                    "description": "The name of the step",
+                    "type": "string"
+                },
+                "Parameters": {
+                    "description": "The parameters for this step",
+                    "items": {
+                        "description": "A DTO for an IParameter",
+                        "properties": {
+                            "Direction": {
+                                "description": "The parameter direction (Input or Output)",
+                                "enum": [
+                                    "Input",
+                                    "Output"
+                                ],
+                                "type": "string"
+                            },
+                            "Name": {
+                                "description": "The name of the parameter",
+                                "type": "string"
+                            },
+                            "Type": {
+                                "description": "The data type of the parameter",
+                                "enum": [
+                                    "String",
+                                    "Boolean",
+                                    "Integer",
+                                    "Float",
+                                    "StringDictionary"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                },
+                "StepID": {
+                    "description": "The ID of the step",
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "Name",
+                "ConfigRequired",
+                "ImplementationID"
+            ],
+            "type": "object"
+        }
+    }
+}

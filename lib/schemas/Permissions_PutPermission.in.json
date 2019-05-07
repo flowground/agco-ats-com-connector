@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "DataDescription": {
+                    "description": "Description of data to be provided with Role Authorization",
+                    "type": "string"
+                },
+                "DataRequired": {
+                    "description": "Indicates if data is required or optional",
+                    "enum": [
+                        "Yes",
+                        "No",
+                        "Optional"
+                    ],
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "Id": {
+                    "description": "The identifier of the permission.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "description": "The name of the permission.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Name",
+                "DataRequired"
+            ],
+            "type": "object"
+        }
+    }
+}

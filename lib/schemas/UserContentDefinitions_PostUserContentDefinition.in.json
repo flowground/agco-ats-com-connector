@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "ContentDefinitionID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserContentDefinitionID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserID": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

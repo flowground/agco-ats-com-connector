@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "Registration for an EDT Lite",
+            "properties": {
+                "DealerCode": {
+                    "description": "The dealer code with which the EDT Lite was created.",
+                    "type": "string"
+                },
+                "ExpirationDate": {
+                    "description": "The date at which the content of the EDT Lite expires.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "InstanceID": {
+                    "description": "The identifier for the EDT Lite.",
+                    "type": "string"
+                },
+                "VoucherCode": {
+                    "description": "The voucher code with which the EDT Lite was created.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "InstanceID",
+                "VoucherCode",
+                "ExpirationDate"
+            ],
+            "type": "object"
+        }
+    }
+}

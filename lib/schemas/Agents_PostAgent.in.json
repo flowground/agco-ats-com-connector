@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "A DTO for an IAgent",
+            "properties": {
+                "AgentID": {
+                    "description": "The id of the Agent",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "KeepAliveInterval": {
+                    "description": "The 'Heartbeat Interval' used by the Build Agent.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "MachineName": {
+                    "description": "The machine name of the computer the agent is running on",
+                    "type": "string"
+                },
+                "Status": {
+                    "description": "The agent status.",
+                    "properties": {
+                        "LastStatusUpdate": {
+                            "description": "ReadOnly. The UTC date and time of the last status update",
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        "Online": {
+                            "description": "Indicates if the agent is online",
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "Online"
+                    ],
+                    "type": "object"
+                },
+                "StepConfigurations": {
+                    "description": "The agent's step configurations",
+                    "items": {
+                        "description": "Step Configuration",
+                        "properties": {
+                            "Configurations": {
+                                "description": "The configuration names supported.  The configurations collection is empty for steps which do not require configuration.",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "StepImplementationID": {
+                                "description": "The Implementation ID of the step this configuration is for",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "StepImplementationID"
+                        ],
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                },
+                "UserID": {
+                    "description": "The UserID of the Agent",
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "UserID",
+                "MachineName",
+                "Status",
+                "KeepAliveInterval"
+            ],
+            "type": "object"
+        }
+    }
+}

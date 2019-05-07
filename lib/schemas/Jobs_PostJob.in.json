@@ -1,0 +1,116 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "A DTO for an IJob",
+            "properties": {
+                "Activities": {
+                    "description": "The activities which are performed for the job",
+                    "items": {
+                        "description": "A DTO for an IJobActivity",
+                        "properties": {
+                            "ActivityID": {
+                                "description": "The ID of the activity to be run as part of the job",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "JobActivityID": {
+                                "description": "The ID of this job activity",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "JobID": {
+                                "description": "The ID of the job this job activity belongs to",
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "ParameterMappings": {
+                                "description": "The mapping of values from a source to be used for the activity parameters",
+                                "items": {
+                                    "description": "A DTO for an IParameterMapping",
+                                    "properties": {
+                                        "Name": {
+                                            "description": "The name of the parameter this mapping applies to",
+                                            "type": "string"
+                                        },
+                                        "Source": {
+                                            "description": "The source of the value.  The meaning of this value is determined by the source type.  When the source type is “Constant” then source is the value formatted as a string.  When the source type is “Variable” then the source is the name of the variable",
+                                            "type": "string"
+                                        },
+                                        "SourceType": {
+                                            "description": "The source type used for supplying the parameter",
+                                            "enum": [
+                                                "Constant",
+                                                "Variable"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "readOnly": true,
+                                "type": "array"
+                            },
+                            "RunOrder": {
+                                "description": "The order of this job activity relative to others in the job",
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                },
+                "Deleted": {
+                    "description": "Indicates if the job has been deleted.",
+                    "type": "boolean"
+                },
+                "JobID": {
+                    "description": "The ID of the job",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "description": "The name of the job",
+                    "type": "string"
+                },
+                "Parameters": {
+                    "description": "The parameters for the job",
+                    "items": {
+                        "description": "A DTO for an IParameter",
+                        "properties": {
+                            "Direction": {
+                                "description": "The parameter direction (Input or Output)",
+                                "enum": [
+                                    "Input",
+                                    "Output"
+                                ],
+                                "type": "string"
+                            },
+                            "Name": {
+                                "description": "The name of the parameter",
+                                "type": "string"
+                            },
+                            "Type": {
+                                "description": "The data type of the parameter",
+                                "enum": [
+                                    "String",
+                                    "Boolean",
+                                    "Integer",
+                                    "Float",
+                                    "StringDictionary"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readOnly": true,
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
